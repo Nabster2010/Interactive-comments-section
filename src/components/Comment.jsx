@@ -71,7 +71,7 @@ const Comment = ({ comment }) => {
         />
       )}
       <div className="flex justify-center ">
-        <div className="w-0.5 bg-LightGray mt-2 md:mx-10 mr-4 "></div>
+        <div className="w-0.5 bg-LightGray mt-4 md:mx-10 mr-4 "></div>
         <div className="flex-1 ">
           {replies &&
             replies.map((reply) => (
