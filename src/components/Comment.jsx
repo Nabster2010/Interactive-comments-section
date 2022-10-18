@@ -9,7 +9,6 @@ import CommentReplyForm from "./CommentReplyForm";
 import ConfirmModal from "./ConfirmModal";
 
 const Comment = ({ comment }) => {
-  const { replies } = comment;
   const { currentUser } = useDataContext();
   const [editMode, setEditMode] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -70,15 +69,17 @@ const Comment = ({ comment }) => {
           hideForm={() => setFormOpen(false)}
         />
       )}
-      <div className="flex justify-center ">
-        <div className="w-0.5 bg-LightGray mt-4 md:mx-10 mr-4 "></div>
-        <div className="flex-1 ">
-          {replies &&
-            replies.map((reply) => (
+
+      {comment?.replies?.length > 0 && (
+        <div className="flex justify-center ">
+          <div className="w-0.5 bg-LightGray mt-4 md:mx-10 mr-4 "></div>
+          <div className="flex-1 ">
+            {comment?.replies.map((reply) => (
               <Reply key={reply.id} reply={reply} commentId={comment.id} />
             ))}
+          </div>
         </div>
-      </div>
+      )}
       <ConfirmModal
         modalOpen={modalOpen}
         handleDelete={handleDelete}

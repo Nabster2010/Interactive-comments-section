@@ -28,8 +28,8 @@ const Reply = ({ reply, commentId }) => {
   const isCurrentUser = reply?.user?.username === currentUser?.username;
   return (
     <>
-      <div className="mt-4">
-        <div className="relative bg-white  flex flex-col-reverse md:flex-row justify-center md:items-start gap-6 rounded-xl shadow-sm font-Rubic p-6">
+      <div className="">
+        <div className="relative bg-white  flex flex-col-reverse md:flex-row justify-center md:items-start gap-6 rounded-xl shadow-sm font-Rubic p-6 mt-4">
           <Counter isReply parentId={commentId} data={reply} />
           <div className="relative space-y-4 flex-1">
             <UserInfo user={reply?.user} createdAt={reply?.createdAt} />
