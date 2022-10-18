@@ -23,7 +23,7 @@ const Reply = ({ reply, commentId }) => {
     e.preventDefault();
     editReply(commentId, reply.id, content);
     setEditMode(false);
-    alert("comment Edited");
+
   };
 
   const isCurrentUser = reply?.user?.username === currentUser?.username;
