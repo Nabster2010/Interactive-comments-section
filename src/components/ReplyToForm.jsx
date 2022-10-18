@@ -16,7 +16,7 @@ const ReplyToForm = ({ data }) => {
   return (
     <form
       onSubmit={handleAddReply}
-      className=" bg-white flex flex-col md:flex-row md:items-start md:justify-center md:gap-6 gap-4 rounded-xl shadow-sm font-Rubic p-6 mt-2"
+      className=" bg-white flex flex-col md:flex-row md:items-start md:justify-center md:gap-6 gap-4 rounded-xl shadow-sm font-Rubic p-6 mt-4"
     >
       <div className="flex-1 md:order-2">
         <textarea

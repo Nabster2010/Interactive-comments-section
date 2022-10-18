@@ -23,13 +23,12 @@ const Reply = ({ reply, commentId }) => {
     e.preventDefault();
     editReply(commentId, reply.id, content);
     setEditMode(false);
-
   };
 
   const isCurrentUser = reply?.user?.username === currentUser?.username;
   return (
     <>
-      <div className="mt-2">
+      <div className="mt-4">
         <div className="relative bg-white  flex flex-col-reverse md:flex-row justify-center md:items-start gap-6 rounded-xl shadow-sm font-Rubic p-6">
           <Counter isReply parentId={commentId} data={reply} />
           <div className="relative space-y-4 flex-1">
